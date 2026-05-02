@@ -576,6 +576,81 @@ body {
   .section-hero h1 { font-size: 2rem; }
 }
 
+/* ── Language Switcher (CSS-only, no JS) ─────────────────────────────── */
+.lang-toggle {
+  position: relative;
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+
+.lang-toggle summary {
+  list-style: none;
+  cursor: pointer;
+  color: var(--text-fade);
+  padding: 0.3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.2s;
+  user-select: none;
+}
+
+.lang-toggle summary::-webkit-details-marker { display: none; }
+.lang-toggle summary::marker { display: none; content: ''; }
+
+.lang-toggle summary:hover { color: var(--accent); }
+
+.lang-toggle summary::after {
+  content: '';
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 4px solid var(--text-fade);
+  transition: border-top-color 0.2s;
+}
+
+.lang-toggle summary:hover::after { border-top-color: var(--accent); }
+
+.lang-menu {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.5rem 0;
+  margin-bottom: 0.4rem;
+  box-shadow: 0 8px 30px -12px var(--shadow-md);
+  min-width: 160px;
+  z-index: 50;
+}
+
+.lang-menu a {
+  display: block;
+  padding: 0.4rem 1rem;
+  color: var(--text-soft);
+  text-decoration: none;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.lang-menu a:hover {
+  color: var(--text);
+  background: var(--bg-warm);
+}
+
+.lang-menu .lang-label {
+  color: var(--text-fade);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 1rem 0.2rem;
+  font-weight: 500;
+}
+
 /* ── Print ───────────────────────────────────────────────────────────── */
 @media print {
   body { background: white; font-size: 11pt; }
