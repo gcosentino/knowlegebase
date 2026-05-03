@@ -361,6 +361,16 @@ body {
   line-height: 1.2;
 }
 
+.entry-subtitle {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-soft);
+  margin-top: 0.75rem;
+  line-height: 1.5;
+  max-width: 36rem;
+}
+
 .entry-meta {
   font-family: var(--sans);
   font-size: 0.8rem;
@@ -543,6 +553,56 @@ body {
   font-weight: 300;
 }
 
+/* ── Essay Images ────────────────────────────────────────────────────── */
+.essay-hero {
+  margin: 0 -1rem 2rem;
+  max-width: none;
+}
+
+.essay-hero img {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.25rem;
+  display: block;
+}
+
+.essay-section-img {
+  margin: 3rem auto;
+  max-width: 800px;
+}
+
+.essay-section-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+  display: block;
+}
+
+/* ── Reference List ──────────────────────────────────────────────────── */
+.ref-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ref-list li {
+  padding: 0.3rem 0;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.ref-list a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.ref-list a:hover {
+  text-decoration: underline;
+}
+
 /* ── Responsive ──────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   html { font-size: 16px; }
@@ -568,12 +628,22 @@ body {
   }
 
   .nav { gap: 1.2rem; flex-wrap: wrap; }
+
+  .entry-header h1 { font-size: 1.8rem; }
+  .entry-subtitle { font-size: 0.95rem; }
+  .essay-hero { margin: 0 0 1.5rem; }
+  .essay-hero img { max-height: 40vh; }
+  .essay-section-img { margin: 2rem auto; }
 }
 
 @media (max-width: 480px) {
   .wrap { padding: 0 1.25rem; }
   .hero h1 { font-size: 2rem; }
   .section-hero h1 { font-size: 2rem; }
+  .entry-header h1 { font-size: 1.5rem; }
+  .entry-subtitle { font-size: 0.88rem; }
+  .essay-hero img { max-height: 30vh; }
+  .essay-section-img { margin: 1.5rem auto; }
 }
 
 /* ── Language Switcher (CSS-only, no JS) ─────────────────────────────── */
